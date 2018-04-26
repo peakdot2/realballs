@@ -1,0 +1,157 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+  font-family: "Roboto";
+}
+
+input {
+  font-family: "Roboto";
+}
+
+*:focus {
+	outline: none;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../icons/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(../icons/MaterialIcons-Regular.woff2) format('woff2'),
+  url(../icons/MaterialIcons-Regular.woff) format('woff'),
+  url(../icons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.context-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity ease 0.2s, visibility linear 0s 0.2s;
+  z-index: 1;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.20), 0 2px 50px 0 rgba(0, 0, 0, 0.16);
+}
+
+.context-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity ease 0.2s 0.2s, visibility linear 0s;
+}
+
+.context-menu .item {
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  transition: background-color ease 0.2s;
+}
+
+.context-menu .item:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+  transition: background-color ease 0.2s;
+}
+
+nav {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  overflow: visible;
+  height: auto;
+  width: 50px;
+  transition: height 0.2s;
+  z-index: 2;
+}
+
+nav .item {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 10px 0;
+  transform: scaleX(0.2) scaleY(0.2);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  transition: transform ease 0.2s, opacity ease 0.2s, visibility linear 0s 0.2s;
+}
+
+nav .item, nav .trigger{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.20), 0 2px 50px 0 rgba(0, 0, 0, 0.16);
+}
+
+nav.active .item{
+  opacity: 1;
+  visibility: visible;
+  transform: scaleX(1) scaleY(1);
+  transition: transform ease 0.2s 0.2s, opacity ease 0.2s 0.2s, visibility linear 0s;
+}
+
+nav .trigger {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #00b3b3; 
+  text-align: center;
+}

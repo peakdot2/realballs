@@ -1,0 +1,11 @@
+#container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+	background-image: url(../imgs/bg.jpg);
+	background-size: cover;  
+	background-position:center top;
+}
